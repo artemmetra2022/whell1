@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Колесо Фортуны</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Колесо Фортуны</h1>
+        <h2>Выигрывает: <span id="result">...</span></h2>
+        <button id="removeButton" class="remove-button">Удалить</button>
+        <button id="clearButton" class="clear-button">Очистить колесо</button>
+        <div class="wheel-container">
+            <canvas id="wheel" width="300" height="300"></canvas>
+            <div class="pointer"></div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="optionInput" placeholder="Введите вариант">
+            <button id="addButton">Добавить</button>
+        </div>
+        <button id="spinButton" class="spin-button">Крутить</button>
+        <div class="presets">
+            <h3>Пресеты:</h3>
+            <button class="preset-button" data-preset="Да/Нет">Да/Нет</button>
+            <button class="preset-button" data-preset="От 1 до 10">От 1 до 10</button>
+            <button class="preset-button" data-preset="Алфавит">Алфавит</button>
+            <button class="preset-button" data-preset="Цвета">Цвета</button>
+            <button class="preset-button" data-preset="Знаки зодиака">Знаки зодиака</button>
+            <button class="preset-button" data-preset="Кухни мира">Кухни мира</button>
+            <button class="preset-button" data-preset="Жанры кино">Жанры кино</button>
+            <button class="preset-button" data-preset="Фрукты">Фрукты</button>
+            <button class="preset-button" data-preset="Спорт">Спорт</button>
+            <button class="preset-button" data-preset="Страны">Страны</button>
+            <button class="preset-button" data-preset="Животные">Животные</button>
+            <button class="preset-button" data-preset="Музыка">Музыка</button>
+        </div>
+    </div>
+
+    <!-- Аудиоэлемент для звука победителя -->
+    <audio id="winSound" src="win-sound.mp3"></audio>
+
+    <!-- Аудиоэлемент для звука вращения -->
+    <audio id="spinSound" src="spin-sound.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
